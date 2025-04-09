@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+  /* social media */
+  ul {
+  list-style: none;
+  }
+  
+  /* Mobile menu style */
+  .mobile-menu {
+    display: none;
+  }
+  
+  .mobile-menu.open {
+    display: block;
+  }
+  
+  /* social media end */
+  /* buttom */
+  /* From Uiverse.io by alexroumi */ 
+  button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  }
+  
+  button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+  }
+  
+  button:hover {
+  color: #e8e8e8;
+  }
+  
+  button:hover::before {
+  width: 100%;
+  }
+  /* buttom */
+  /* menue btn */
+  /* From Uiverse.io by gagan-gv */ 
+  .btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background: #040f16;
+  color: #f5f5f5;
+  }
+  
+  .btn:hover {
+  box-shadow: 0 0 20px 0px #2e2e2e3a;
+  }
+  
+  .btn .icon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  }
+  
+  .btn .text {
+  transform: translateX(55px);
+  }
+  
+  .btn:hover .icon {
+  width: 175px;
+  }
+  
+  .btn:hover .text {
+  transition: all 0.5s;
+  opacity: 0;
+  }
+  
+  .btn:focus {
+  outline: none;
+  }
+  
+  .btn:active .icon {
+  transform: scale(0.85);
+  }
+  /* menue btn */
+  .desktop-view {
+  position: relative;
+  height: 80vh; /* Adjusted the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #E6E6FA, #D8BFD8); /* Lavender to Soft Mauve */
+  
+  
+  overflow: hidden; /* This prevents elements from overflowing outside the container */
+  }
+  
+  .desktop-view::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.5); /* Subtle abstract circle shape */
+  border-radius: 50%;
+  z-index: 0; /* Ensuring it's behind the content */
+  animation: float 5s infinite ease-in-out; /* Adding subtle floating animation */
+  }
+  
+  .desktop-view::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 8s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+  0%, 100% {
+  transform: translateY(0);
+  }
+  50% {
+  transform: translateY(20px);
+  }
+  }
+  
+  /* Ensure content stays on top */
+  .desktop-view .text-center {
+  position: relative;
+  z-index: 1;
+  }
+  /* section 2 */
+  .section-view2 {
+  background: rgb(180,184,166);background: linear-gradient(90deg, rgba(180,184,166,1) 38%, rgba(255,255,255,1) 36%);
+  padding: 60px 0; /* Increased padding for more breathing room */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Prevent overflow for extra elements */
+  }
+  
+  .section-view2::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.2); /* Abstract shape */
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 6s infinite ease-in-out;
+  }
+  
+  .section-view2::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.15); /* Abstract shape */
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 10s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+  0%, 100% {
+  transform: translateY(0);
+  }
+  50% {
+  transform: translateY(20px);
+  }
+  }
+  
+  .section-view2 .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  }
+  
+  .section-view2 img {
+  border-radius: 10px;
+  border: 5px solid #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section-view2 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+  }
+  
+  .section-view2 h3 {
+  font-size: 2.5rem;
+  font-family: 'Sofia', sans-serif; /* Fancy font from Google Fonts */
+  color: #333;
+  margin-bottom: 10px;
+  }
+  
+  .section-view2 h5 {
+  font-size: 1.5rem;
+  color: #555;
+  font-family: 'Audiowide', cursive; /* Another creative font */
+  margin-bottom: 20px;
+  }
+  
+  .section-view2 p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  }
+  
+  .section-view2 button {
+  padding: 12px 20px;
+  background-color: #FF5722;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section-view2 button:hover {
+  background-color: #E64A19;
+  box-shadow: 0px 5px 15px rgba(255, 87, 34, 0.4);
+  }
+  /* section 3 */
+  /* Custom styles for hover effect */
+  .service-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Change this color as needed */
+  }.logo {
+    width: 70px; 
+    height: 70px; 
+    
+    object-fit: cover; 
+    margin-left: 11px;
+  }
+  .desktop-menu {
+    font-family: Arial, Helvetica, sans-serif !important ;
+   
+   
+  }
+  
