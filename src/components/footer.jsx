@@ -4,20 +4,9 @@ import Typed from 'typed.js';
 const Footer = () => {
   useEffect(() => {
     // Ensure the element is available before initializing Typed.js
-    const typedTextElement = document.querySelector('#typeWritten .typed-text');
-    const typedTargetElement = document.querySelector('#typeWritten h2');
+   
 
-    if (typedTextElement && typedTargetElement) {
-      const typed_strings = typedTextElement.textContent.split(', ');  // split by commas
-      new Typed(typedTargetElement, {
-        strings: typed_strings,
-        typeSpeed: 100,
-        backSpeed: 20,
-        loop: true,
-      });
-    } else {
-      console.error("Required elements for Typed.js not found.");
-    }
+  
 
     // Toggle mobile menu
     const menuBtn = document.getElementById('menu-btn');
@@ -97,12 +86,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Typewriter effect container */}
-      <div id="typeWritten">
-        <h2>
-          <span className="typed-text">Web Design, Web Development, Graphic Design</span>
-        </h2>
-      </div>
+     
     </footer>
   );
 };

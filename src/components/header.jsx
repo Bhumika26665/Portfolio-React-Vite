@@ -6,9 +6,9 @@ import { FaXTwitter } from "react-icons/fa6";
 function Header() {
   useEffect(() => {
     const options = {
-      strings: ["Web Designer", "Web Developer", "Front End Developer"],
-      typeSpeed: 1000,
-      backSpeed: 30,
+      strings: ["Web Designer", "Web Developer", "Front End Developer","Backend Developer"],
+      typeSpeed: 100,
+      backSpeed: 20,
       smartBackspace: false,
       loop: true,
     };

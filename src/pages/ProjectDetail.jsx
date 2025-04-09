@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Navbar from "../components/navbar";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -69,6 +70,8 @@ const ProjectDetail = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="project-detail container mx-auto p-4">
       {/* Project Image */}
       {project.image && <img src={project.image} alt={project.title} className="w-full h-auto mb-4" />}
@@ -114,6 +117,7 @@ const ProjectDetail = () => {
         Visit Project
       </a>
     </div>
+    </>
   );
 };
 
