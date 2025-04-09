@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
-import { IoMdMenu } from "react-icons/io";
 
 function Navbar() {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);  // Corrected the state setter name here
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   const closeMobileMenu = () => {
@@ -39,7 +38,7 @@ function Navbar() {
             {/* Mobile Menu Button */}
             <div className="mobile-menu-button md:hidden">
               <button
-                className="md:hidden text-white focus:outline-none"
+                className="text-gray-700 focus:outline-none"
                 onClick={toggleMobileMenu}
                 aria-label="Toggle mobile menu"
               >
@@ -51,14 +50,23 @@ function Navbar() {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="absolute inset-0 z-20 bg-black opacity-50" onClick={closeMobileMenu}></div>
+          <div
+            className="absolute inset-0 z-20 bg-black opacity-50"
+            onClick={closeMobileMenu}
+          ></div>
         )}
 
         {/* Mobile Menu */}
         <div
-          className={`absolute inset-0 z-30 bg-white transition-transform duration-300 transform ${
-            isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          className={`absolute top-0 right-0 h-full z-30 bg-white transition-transform duration-300 transform ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
+          style={{
+            width: '100px',
+            height:'auto',  // Set width based on content
+            marginRight: '2px',  // Decreased margin right for a smaller gap
+            
+          }}
         >
           <div className="flex flex-col items-center space-y-4 py-8">
             <a href="#home" className="text-gray-700 hover:text-blue-600" onClick={closeMobileMenu}>Home</a>
