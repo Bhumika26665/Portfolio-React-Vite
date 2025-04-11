@@ -72,7 +72,7 @@ const ProjectDetail = () => {
   return (
     <>
     <Navbar/>
-    <div className="project-detail container mx-auto p-4">
+    <div className="project-detail container w-full overflow-x-hidden px-4 sm:px-6 lg:px-8">
       {/* Project Image */}
       {project.image && <img src={project.image} alt={project.title} className="w-full h-auto mb-4" />}
 

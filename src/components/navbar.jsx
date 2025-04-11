@@ -58,16 +58,16 @@ function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-0 right-0 h-full z-30 bg-white transition-transform duration-300 transform ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-          style={{
-            width: '100px',
-            height:'auto',  // Set width based on content
-            marginRight: '2px',  // Decreased margin right for a smaller gap
-            
-          }}
-        >
+  className={`absolute top-0 right-0 h-full z-30 bg-white transition-transform duration-300 transform ${
+    isMobileMenuOpen ? "translate-x-0" : "hidden"
+  }`}
+  style={{
+    width: '100px',
+    height: 'auto',
+    marginRight: '2px',
+  }}
+>
+  
           <div className="flex flex-col items-center space-y-4 py-8">
             <a href="#home" className="text-gray-700 hover:text-blue-600" onClick={closeMobileMenu}>Home</a>
             <a href="#about" className="text-gray-700 hover:text-blue-600" onClick={closeMobileMenu}>About Us</a>
